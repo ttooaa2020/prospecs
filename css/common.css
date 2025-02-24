@@ -1,0 +1,470 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+  --Darck-100: #000;
+  --Darck-60: #666666;
+  --Light-100: #fff;
+  --btn: #b4b4b4;
+  --border: #bababa;
+
+  --main-color: #931b37;
+  --main-color2: #e50036;
+}
+
+::selection {
+  background: var(--main-color);
+  color: var(--Light-100);
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--Darck-100);
+  text-align: center;
+
+  font-size: clamp(2.5rem, 2.0833vw, 4rem);
+}
+
+section {
+  margin-bottom: 10rem;
+  margin-bottom: 5.2083%;
+}
+
+html {
+  font-size: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 2rem/1.5 Pretendard, sans-serif;
+  color: var(--Darck-100);
+  text-transform: capitalize;
+  word-break: keep-all;
+  overflow-x: hidden;
+
+  min-width: 36rem;
+  background: var(--Light-100);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.inner {
+  width: 152rem;
+  margin: 0 auto;
+
+  width: 79.1667%;
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* background: var(--Light-100); */
+
+  transition: 0.4s;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 6.5rem 0; */
+
+  padding: 0.5% 0;
+}
+
+header.scrolled {
+  background-color: var(--Light-100);
+}
+
+header.scrolled .logo a {
+  background: url(https://image.prospecs.com/front/ux/css/images/ps-new/ps_logo_bk.svg)
+    no-repeat center / contain;
+}
+
+header.scrolled .nav-con {
+  color: var(--Darck-100);
+}
+
+header.scrolled .join-btn a:nth-child(1) {
+  background: url(../img/shop-bag-darck.svg) no-repeat 50% / contain;
+}
+
+header.scrolled .join-btn a:nth-child(2) {
+  background: url(../img/join-darck.svg) no-repeat 50% / contain;
+}
+
+header.scrolled .language-list li a {
+  display: block;
+  padding: 2rem;
+  text-align: center;
+
+  font-weight: 500;
+
+  padding: 14.5985%;
+}
+
+header.hide {
+  transform: translateY(-100%);
+}
+
+.logo a {
+  display: block;
+  width: 14rem;
+  height: 5.3rem;
+  background: url(https://image.prospecs.com/front/ux/css/images/ps-new/ps_logo_wh.svg)
+    no-repeat center / contain;
+}
+
+.nav-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Light-100);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  gap: 6.5789%;
+}
+
+.gnb {
+  display: flex;
+}
+
+.gnb li {
+  padding: 0 3.1rem;
+  font-size: 2rem;
+  font-weight: 600;
+
+  font-size: clamp(1.6rem, 1.042vw, 2rem);
+}
+
+.join-btn {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.join-btn a:nth-child(1) {
+  display: block;
+  width: 3rem;
+  height: 3.5rem;
+  background: url(../img/shop-bag.svg) no-repeat 100% / contain;
+}
+
+.join-btn a:nth-child(2) {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/join.svg) no-repeat 100% / contain;
+}
+
+.mobile-more-btn {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  background: url(../img/more-icon.svg) no-repeat 50% / contain;
+}
+
+header.scrolled .mobile-more-btn {
+  background: url(../img/more-icon-darck.svg) no-repeat 50% / contain;
+}
+
+/* header end */
+
+/* 모바일 메뉴 */
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: var(--main-color);
+  color: var(--Light-100);
+  transition: 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+
+  z-index: 1000;
+}
+
+.mobile-btn-close {
+  position: absolute;
+  top: 7rem;
+  right: 5.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url(../img/close-icon.svg) no-repeat 40% / contain;
+  z-index: 1000;
+}
+
+.mobile-gnb {
+  margin-top: 15rem;
+}
+
+.mobile-gnb li a {
+  font-weight: 600;
+  font-size: 2.2rem;
+  display: block;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.mobile-gnb li a:hover {
+  color: var(--Darck-100);
+}
+
+/* 모바일 메뉴 end */
+
+/* s. footer */
+#footer {
+  background: var(--Darck-100);
+
+  padding: 5% 0;
+}
+
+.foot-nav {
+  display: flex;
+  margin-left: -2rem;
+
+  flex-wrap: wrap;
+}
+
+.foot-nav li {
+  font-weight: 700;
+  font-size: 2rem;
+  font-size: clamp(1.2rem, 1.4084vw, 2rem);
+  flex-shrink: 0;
+}
+
+.foot-nav li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--Light-100);
+}
+
+.footer-con {
+  display: flex;
+
+  padding-top: 1.5%;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--Light-100);
+}
+
+address {
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.2676vw, 1.8rem);
+}
+
+.in {
+  display: flex;
+  gap: 4.9rem;
+  padding: 3.7rem 0;
+}
+
+.foot-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+.foot-logo {
+  display: block;
+  width: 22rem;
+  height: 8.3rem;
+  background: url(https://image.prospecs.com/front/ux/css/images/ps-new/ps_logo_wh.svg)
+    no-repeat 50% / contain;
+}
+
+.link-icon {
+  display: flex;
+  background: no-repeat 50%;
+  gap: 3rem;
+}
+
+.link-icon li:nth-child(1) a {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+
+  background: url(../img/link-icon-1.svg) no-repeat 50% / contain;
+}
+
+.link-icon li:nth-child(2) a {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+
+  background: url(../img/link-icon-2.svg) no-repeat 50% / contain;
+}
+
+.link-icon li:nth-child(3) a {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+
+  background: url(../img/link-icon-3.svg) no-repeat 50% / contain;
+}
+
+/* e. footer */
+
+.top-btn {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  bottom: 5rem;
+  right: 7.5rem;
+  z-index: 100;
+
+  bottom: 11.5%;
+  right: 3.9063%;
+}
+/* e. footer */
+
+.top {
+  display: block;
+  width: 7.4rem;
+  height: 7.4rem;
+  border-radius: 100%;
+  background: var(--Darck-100)
+    url(https://www.handsome.co.kr/resources/pc/ext/images/ico-button-tooltop.png)
+    no-repeat center/40%;
+  /* 
+  border: 0.5px solid #ffffff; */
+}
+
+/* 반응형00000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+@media screen and (max-width: 1400px) {
+  /* footer */
+  .foot-logo {
+    width: 15rem;
+    height: 15rem;
+
+    margin-top: 1.5rem;
+  }
+  /* footer */
+}
+
+@media screen and (max-width: 1024px) {
+  .logo a {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .gnb li {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gnb li {
+    display: none;
+  }
+
+  .mobile-more-btn {
+    display: block;
+  }
+
+  .join-btn {
+    padding-right: 2rem;
+  }
+
+  /* foot */
+
+  /* foot */
+  .footer-con {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .foot-logo {
+    width: 13rem;
+    height: 4rem;
+  }
+
+  address {
+    margin-top: 2rem;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 890px) {
+  .visual {
+    height: 57.6rem;
+  }
+
+  .visual figure img {
+    height: 57.6rem;
+  }
+
+  .visual-text {
+    gap: 0.9rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .inner {
+    width: 90%;
+  }
+
+  .join-btn {
+    display: none;
+  }
+
+  .foot-nav {
+    justify-content: center;
+  }
+
+  .footer-con {
+    align-items: center;
+    text-align: center;
+  }
+}

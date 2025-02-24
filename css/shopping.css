@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* 버튼들 */
+.lend-tabmenu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.lend-tabmenu button {
+  width: 10%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: var(--Darck-60);
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  font-size: clamp(1.5rem, 1.0416vw, 2rem);
+}
+
+.lend-tabmenu button:hover {
+  transition: 0.1s;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.3);
+}
+
+.lend-tabmenu button.on {
+  transition: 0.4s;
+  color: var(--Darck-100);
+  border-bottom: 5px solid #000;
+  font-size: 2.5rem;
+  font-size: clamp(2rem, 1.302vw, 2.5rem);
+}
+/* 버튼들 */
+
+.event-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+
+  margin-top: 5%;
+}
+
+.event-list li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 49.2rem;
+  width: 32.3684%;
+}
+
+.event-list li figure {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.event-list > li figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.event-list > li:hover figure::after {
+  opacity: 0.3;
+}
+
+.event-list li img {
+  width: 100%;
+  height: 100%;
+}
+
+.event-list li {
+  text-align: center;
+  position: relative;
+}
+
+.event-text {
+  padding-top: 2.8rem;
+}
+
+.event-text dt {
+  font-size: clamp(1.5rem, 1.25vw, 2.4rem);
+  font-weight: 800;
+  color: var(--Darck-100);
+}
+
+.event-text dd {
+  padding-top: 1rem;
+  font-size: clamp(1.3rem, 1.042vw, 2rem);
+  font-weight: 600;
+  color: var(--Darck-60);
+}
+
+/* 반응형  000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
+@media (max-width: 1900px) {
+  .event-list li {
+    width: 30rem;
+    flex: 1 1 30%;
+  }
+}
+
+@media (max-width: 1210px) {
+  .event-list li {
+    width: 20rem;
+  }
+
+  .event-list li figure {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-list li {
+    flex: 1 1 40%;
+  }
+}
